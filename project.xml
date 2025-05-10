@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Flying Toasters" package="com.sample.flyingtoasters" version="0.1.0" company="Joshua" />
+	<app main="Main" path="Export" file="FlyingToasters" />
+	
+	<source path="Source" />
+	
+	<haxelib name="openfl" />
+	
+	<assets path="Assets" rename="assets" embed="true" />
+
+	<window background="#000000" fps="60" />
+	
+</project>
