@@ -51,7 +51,7 @@ class Main extends Sprite {
 					case '3':
 						toastType = 3;
 					default:
-						trace("Error: " + arg + " must be either 0, 1, 2, or 3.");
+						Sys.stderr().writeString("Error: " + arg + " must be either 0, 1, 2, or 3.\n");
 						Sys.exit(0);
 				}
 			}
@@ -61,7 +61,7 @@ class Main extends Sprite {
 	}
 
 	private function printHelp() {
-		trace("Help message here.");
+		Sys.stdout().writeString("Help message here.\n");
 	}
 
 	private function addToaster(posX:Float, posY:Float) {
