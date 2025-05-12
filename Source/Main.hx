@@ -61,7 +61,19 @@ class Main extends Sprite {
 	}
 
 	private function printHelp() {
-		Sys.stdout().writeString("Help message here.\n");
+		var programName:String;
+
+		if (Sys.systemName() == 'Windows') {
+			programName = Sys.programPath().split("\\").pop();
+		} else {
+			programName = Sys.programPath().split("/").pop();
+		}
+
+		Sys.stdout().writeString(programName + "\n");
+		Sys.stdout().writeString("Usage: " + programName + " [options]\n");
+		Sys.stdout().writeString("Options:\n");
+		Sys.stdout().writeString("  -h, --help              Show this help message.\n");
+		Sys.stdout().writeString("  -t, --toast [type]      Set the type of toast (0, 1, 2, or 3).\n");
 	}
 
 	private function addToaster(posX:Float, posY:Float) {
