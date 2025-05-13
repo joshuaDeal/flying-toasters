@@ -128,9 +128,9 @@ class Main extends Sprite {
 
 			if (toaster.x < -64 || toaster.y > stage.stageHeight + 64) {
 				// trace("Removing toaster at position (" + toaster.x + ", " + toaster.y + ")");
+				toaster.removeListeners();
 				removeChild(toaster);
 				toasters.splice(i, 1);
-				toaster.removeListeners();
 				toaster = null;
 			}
 
