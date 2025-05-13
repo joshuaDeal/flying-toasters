@@ -63,4 +63,10 @@ class Toaster extends Sprite {
 		frameIndex = (frameIndex + 1) % frames.length;
 		tile.id = frames[frameIndex]; // Update tile index for animation
 	}
+
+	public function removeListeners() {
+		animationTimer.stop();
+		animationTimer.removeEventListener(TimerEvent.TIMER, updateAnimation);
+		animationTimer = null;
+	}
 }

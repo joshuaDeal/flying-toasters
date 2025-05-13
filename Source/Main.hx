@@ -130,6 +130,7 @@ class Main extends Sprite {
 				// trace("Removing toaster at position (" + toaster.x + ", " + toaster.y + ")");
 				removeChild(toaster);
 				toasters.splice(i, 1);
+				toaster.removeListeners();
 				toaster = null;
 			}
 
